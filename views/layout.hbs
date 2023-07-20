@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <div class="container">
+  <img src="/images/squashCarpaccio.jpg" alt="menu" style="width:70%;">
+  <div class="centered">Rinaldi</div>
+</div>
+
+<div class="contact-info"><p>Miami, FL</p>
+<p>Established 2023</p>
+</div>
+
+<div class="menu-header">
+<a href="/menu"><h3>Explore Our Menu</h3></a>
+</div>
+
+<header>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/users/profile">Profile</a></li>
+                    <li><a href="/auth/signup">Signup</a></li>
+
+                </ul>
+                 <form action="/auth/logout" method="get">
+        <button type="submit">Logout</button>
+      </form>
+            </nav>
+
+{{#if out}}
+
+            <div class="log-in">
+  <form action="/auth/login" method="POST">
+
+    <label for="email">Email</label>
+    <input id="email" type="text" name="email"/>
+
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password"/>
+
+    <button type="submit">Login</button>
+
+    {{#if errorMessage}}
+      <p>{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
+   {{/if}}
+   
+        </header>
+
+    {{{body}}}
+
+  </body>
+</html>

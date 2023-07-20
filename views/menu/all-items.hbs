@@ -1,0 +1,43 @@
+
+{{#if user.isOwner}}
+
+<a href="/menu/add-item">Add Item</a>
+
+<div class="row">
+{{#each menu.items}}
+<div class="column">
+
+<h4>{{name}}</h4>
+<p class="description">{{description}}</p>
+<p>{{price}}</p>
+<img src="{{imageUrl}}" alt="food-item">
+<a href="/menu/edit-item/{{_id}}">Edit Item</a>
+<a href="/menu/delete-item/{{_id}}">Delete Item</a>
+
+
+{{/each}}
+
+{{else}}
+
+<div class="row">
+{{#each menu.items}}
+<div class="column">
+
+<h4>{{name}}</h4>
+<p class="description">{{description}}</p>
+<p>{{price}}</p>
+<img src="{{imageUrl}}" alt="food-item">
+<form action="/order/add-item/{{_id}}" method="post">
+<button type="submit">Add to cart</button> 
+</form>
+
+</div>
+
+
+{{/each}}
+
+</div>
+
+
+
+{{/if}}
