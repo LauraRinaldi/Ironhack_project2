@@ -58,19 +58,19 @@ router.post('/add-item', (req, res, next) => {
   
   })
 
-router.get("/create-menu", (req, res, next) => {
-    Menu.create({
-      owner: req.session.user._id
-    })
-    .then((createdMenu) => {
-      console.log("Created Menu", createdMenu)
-      res.redirect('/users/profile')
-    })
-    .catch((err) => {
-      console.log("Error creating menu:", err)
-      next(err)
-    })
-  })
+// router.get("/create-menu", (req, res, next) => {
+//     Menu.create({
+//       owner: req.session.user._id
+//     })
+//     .then((createdMenu) => {
+//       console.log("Created Menu", createdMenu)
+//       res.redirect('/users/profile')
+//     })
+//     .catch((err) => {
+//       console.log("Error creating menu:", err)
+//       next(err)
+//     })
+//   })
 
 router.get('/edit-item/:id', (req, res, next) => {
     Item.findById(req.params.id)
