@@ -1,0 +1,19 @@
+<h2>Your Cart</h2>
+
+{{#each items}}
+<img src="{{imageUrl}}" alt="item">
+<h4>{{name}}</h4>
+<p>{{description}}</p>
+<p>{{price}}</p>
+<form action="/order/remove-item/{{_id}}" method="GET">
+    <button>Remove Item</button>
+    
+</form>
+
+<br>
+{{/each}}
+
+
+<a href="/order/delete-order/{{_id}}">Delete Order</a>
+
+<br>

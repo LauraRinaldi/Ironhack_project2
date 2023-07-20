@@ -1,0 +1,18 @@
+{{#if isOwner}}
+
+<h1>Welcome</h1>
+
+<a href="/menu">Menu Details</a>
+<a href="/menu/add-item">Add menu item</a>
+{{else}}
+
+<h1>Welcome</h1>
+
+<h2>Order here</h2>
+
+{{!-- <a href="/menu">Menu Details</a>
+<a href="/order/pickup">Pick-up</a>
+<a href="/order/delivery">Delivery</a> --}}
+<a href="/order/order-details">See my order</a>
+
+{{/if}}
