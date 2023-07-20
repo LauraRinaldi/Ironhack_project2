@@ -1,0 +1,135 @@
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 95vh;
+}
+
+.contact-info {
+  text-align: center;
+  position: absolute;
+  bottom: 200px;
+  right: 675px;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  color: white
+}
+
+
+.menu-header {
+  text-align: center;
+}
+
+a {
+  color: #0c6424;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic; 
+}
+
+body {
+  font-family: trade-gothic-next,sans-serif;
+  font-weight: 400;
+  width: 98vw;
+  /* font-style: normal;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  background: #fef9f1;
+  letter-spacing: .03rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+main {
+  color: white;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+  justify-content: space-between;
+}
+
+header * {
+  display: inline;
+}
+
+header li {
+  margin: 20px;
+}
+
+header li a {
+  color: black;
+  text-decoration: none;
+}
+
+.log-in {
+  /* position: fixed; */
+  align-self: flex-end;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  box-shadow: 0 0 25px 0 black;
+}
+
+button {
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  width: 96%;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 2%;
+}
+
+.column {
+  flex: 50%;
+
+}
+
+.description {
+  width: 80%
+}
